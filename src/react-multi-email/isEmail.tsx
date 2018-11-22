@@ -89,7 +89,7 @@ function isFQDN(str: string, options?: IFqdnOptions) {
 }
 
 function isEmail(str: string, options?: IEmailOptions) {
-  options = { ...options, ...defaultEmailOptions };
+  options = { ...defaultEmailOptions, ...options };
 
   if (options.requireDisplayName || options.allowDisplayName) {
     const displayEmail = str.match(displayName);
